@@ -16,7 +16,7 @@ public class IndexController {
         return "<html><body><h1>I'm Index</h1></body></html>";
     }
 
-    @GetMapping("home")
+    @GetMapping("/home")
     public String home(Model model) {
         model.addAttribute("name", "Antonio");
         return "home-page";

@@ -12,6 +12,11 @@
 
     <body>
         <h1>Best Movies</h1>
-        <p th:text="${movieList}"></p>
+        <ul>
+            <li th:each="movie : ${movieList}">
+                <span th:text="${movie.id}"></span>
+                <span th:text="${movie.title}"></span>
+            </li>
+        </ul>
     </body>
 </html>

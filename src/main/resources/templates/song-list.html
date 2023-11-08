@@ -12,6 +12,11 @@
 
     <body>
         <h1>Best Songs</h1>
-        <p th:text="${songList}"></p>
+        <ul>
+            <li th:each="song : ${songList}">
+                <span th:text="${song.id}"></span>
+                <span th:text="${song.title}"></span>
+            </li>
+        </ul>
     </body>
 </html>
