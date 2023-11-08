@@ -2,7 +2,7 @@
 
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 
-    <head>
+    <head th:insert="/fragments/resources :: headResources('Song List')">
         <meta charset="UTF-8">
         <meta name="viewport"
               content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -11,12 +11,18 @@
     </head>
 
     <body>
-        <h1>Best Songs</h1>
-        <ul>
-            <li th:each="song : ${songList}">
-                <span th:text="${song.id}"></span>
-                <span th:text="${song.title}"></span>
-            </li>
-        </ul>
+        <div class="container">
+            <h1>Best Songs</h1>
+            <ul>
+                <li th:each="song : ${songList}">
+                    <span th:text="${song.id}"></span>
+                    <span th:text="${song.title}"></span>
+                </li>
+            </ul>
+
+            <a th:href="@{/home}">Back to home</a>
+        </div>
+
+        <th:block th:replace="/fragments/resources :: jsResources"></th:block>
     </body>
 </html>

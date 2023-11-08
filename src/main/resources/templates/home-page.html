@@ -2,7 +2,7 @@
 
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 
-    <head>
+    <head th:insert="/fragments/resources :: headResources('Home')">
         <meta charset="UTF-8">
         <meta name="viewport"
               content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -11,6 +11,11 @@
     </head>
 
     <body>
-        <h1 th:text="'Best of the year by ' + ${name}"></h1>
+    <nav th:replace="/fragments/navbar :: topNavbar('home')"></nav>
+        <div class="container">
+            <h1 th:text="'Best of the year by ' + ${name}"></h1>
+        </div>
+
+    <th:block th:replace="/fragments/resources :: jsResources"></th:block>
     </body>
 </html>
