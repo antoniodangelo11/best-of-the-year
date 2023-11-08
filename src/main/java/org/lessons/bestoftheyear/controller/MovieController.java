@@ -30,9 +30,26 @@ public class MovieController {
 
     private List<Movie> getBestMovies() {
         Movie[] bestMovies = {
-            new Movie(1,"Matrix"),
-            new Movie(2,"Lord of the Rings"),
-            new Movie(3,"Terminator")
+            new Movie(
+                    1,
+                    "Matrix",
+                    "Lana Wachowski and Lilly Wachowski",
+                    "Matrix (The Matrix) è un film di fantascienza del 1999 in " +
+                            "stile cyberpunk scritto e diretto dai fratelli Andy e Larry Wachowski."),
+
+                new Movie(
+                        2,
+                        "Lord of the Rings",
+                        "Peter Jackson",
+                        "Il Signore degli Anelli (The Lord of the Rings) " +
+                            "è un romanzo epico high fantasy scritto da J. R." +
+                            " R. Tolkien."),
+
+                new Movie(
+                        3,
+                        "Terminator",
+                        "James Cameron",
+                        "Terminator (The Terminator) è un film del 1984 diretto da James Cameron."),
         };
         return Arrays.asList(bestMovies);
     }

@@ -31,9 +31,31 @@ public class SongController {
 
     private List<Song> getBestSongs() {
         Song[] bestSongs = {
-                new Song(1,"Money"),
-                new Song(2,"The Wall"),
-                new Song(3,"The Dark Side of the Moon")
+                new Song(
+                        1,
+                        "Money",
+                        "Pink Floyd",
+                        "Money/Any Colour You Like è un singolo del " +
+                                "gruppo musicale britannico Pink Floyd, " +
+                                "pubblicato il 7 maggio 1973 come primo estratto dall'ottavo album in studio " +
+                                "The Dark Side of the Moon."),
+
+                new Song(
+                        2,
+                        "The Wall",
+                        "Pink Floyd",
+                        "The Wall è l'undicesimo album in studio " +
+                                "del gruppo musicale britannico Pink Floyd, " +
+                                "pubblicato nel 1979 dalla Harvest/EMI in Europa e in Giappone, " +
+                                "e dalla Columbia/Sony nel resto del mondo."),
+
+                new Song(
+                        3,
+                        "Speak To Me",
+                        "Pink Floyd",
+                        "Speak to Me è un brano musicale del gruppo musicale britannico " +
+                                "Pink Floyd, traccia d'apertura dell'ottavo album in studio " +
+                                "The Dark Side of the Moon, pubblicato nel 1973."),
         };
         return Arrays.asList(bestSongs);
     }
